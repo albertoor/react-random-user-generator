@@ -3,10 +3,10 @@ const formatData = apiResponse => {
   return data;
 };
 
-const getUser = () => {
+const getUsers = () => {
   return fetch('https://randomuser.me/api/?results=20')
     .then(res => res.json())
     .then(formatData);
 };
 
-export default getUser;
+export default getUsers;

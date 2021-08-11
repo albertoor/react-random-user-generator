@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
-import getUser from './services/getUser';
+import getUsers from './services/getUsers';
 
 const App = () => {
-  getUser().then(data => {
+  getUsers().then(data => {
     console.log(data);
   });
 
