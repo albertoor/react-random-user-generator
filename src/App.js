@@ -1,11 +1,9 @@
 import React from 'react';
 import './style.css';
-import getUsers from './services/getUsers';
+import useUsers from './hooks/useUsers';
 
 const App = () => {
-  getUsers().then(data => {
-    console.log(data);
-  });
+  const users = useUsers();
 
   return <div> Hello from App</div>;
 };
