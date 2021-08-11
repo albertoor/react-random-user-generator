@@ -4,11 +4,12 @@ import useUsers from '../hooks/useUsers';
 const UsersList = () => {
   const users = useUsers();
 
+  // console.log(users);
 
   return (
-    <div>
+    <>
       {users.map(item => (
-        <div>
+        <div key={item.id.value}>
           <img src={item.picture.thumbnail} />
           <h1>
             Name: {item.name.first} {item.name.last}
@@ -20,7 +21,7 @@ const UsersList = () => {
           <h2>Gender: {item.gender}</h2>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
