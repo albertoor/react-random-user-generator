@@ -1,13 +1,12 @@
 import React from 'react';
-import './style.css';
+import './App.css';
 import UsersList from './components/UsersList';
 
 const App = () => {
   return (
-    <div>
-      Hello
+    <body>
       <UsersList />
-    </div>
+    </body>
   );
 };
 

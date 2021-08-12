@@ -1,18 +1,17 @@
 import React from 'react';
 import useUsers from '../hooks/useUsers';
 import User from '../components/User';
+import './UsersList.css';
 
 const UsersList = () => {
   const users = useUsers();
 
-  // console.log(users);
-
   return (
-    <>
+    <div className="users-container">
       {users.map(item => (
         <User
           id={item.id.value}
-          img={item.picture.thumbnail}
+          picture={item.picture.large}
           firstName={item.name.first}
           lastName={item.name.last}
           email={item.email}
@@ -22,7 +21,7 @@ const UsersList = () => {
           gender={item.gender}
         />
       ))}
-    </>
+    </div>
   );
 };
 
