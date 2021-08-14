@@ -4,33 +4,7 @@ import { FiMail } from 'react-icons/fi';
 import { BiFemaleSign, BiWorld } from 'react-icons/bi';
 import { GiMale, GiCrown } from 'react-icons/gi';
 import { AiFillPhone } from 'react-icons/ai';
-
-const styles = {
-    green: {
-      background: "#54ffd6"
-    },
-    purple: {
-      background: '#abacff'
-    },
-    lightPurple:{
-      background: '#a7cbe9'
-    },
-    lightBlue: {
-      background: '#a7cbe9'
-    },
-    blue: {
-      background: '#a7cbe9'
-    },
-    pink: {
-      background: '#ffb8e3'
-    },
-    yellow: {
-      background: '#fcdeaa'
-    },
-    red: {
-      background: '#ff88a1'
-    }
-}
+import useBackground from '../hooks/useBackground';
 
 const User = ({
   id,
@@ -45,10 +19,17 @@ const User = ({
 }) => {
   const isMale = gender === 'male';
 
+  const background = useBackground();
+
+  console.log(background.color);
+
   return (
     <>
       <div className="user-card" key={id}>
-        <div className="user-card-img-name-section" style={{background-color: #54ffd6 }}>
+        <div
+          className="user-card-img-name-section"
+          style={{ background: `${background.color}` }}
+        >
           <img src={picture} />
           <h1>
             {firstName} {lastName}
