@@ -5,6 +5,33 @@ import { BiFemaleSign, BiWorld } from 'react-icons/bi';
 import { GiMale, GiCrown } from 'react-icons/gi';
 import { AiFillPhone } from 'react-icons/ai';
 
+const styles = {
+    green: {
+      background: "#54ffd6"
+    },
+    purple: {
+      background: '#abacff'
+    },
+    lightPurple:{
+      background: '#a7cbe9'
+    },
+    lightBlue: {
+      background: '#a7cbe9'
+    },
+    blue: {
+      background: '#a7cbe9'
+    },
+    pink: {
+      background: '#ffb8e3'
+    },
+    yellow: {
+      background: '#fcdeaa'
+    },
+    red: {
+      background: '#ff88a1'
+    }
+}
+
 const User = ({
   id,
   picture,
@@ -21,10 +48,12 @@ const User = ({
   return (
     <>
       <div className="user-card" key={id}>
-        <img src={picture} />
-        <h1>
-          {firstName} {lastName}
-        </h1>
+        <div className="user-card-img-name-section" style={{background-color: #54ffd6 }}>
+          <img src={picture} />
+          <h1>
+            {firstName} {lastName}
+          </h1>
+        </div>
 
         <div className="user-card-info-item">
           <i>
