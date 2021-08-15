@@ -24,18 +24,18 @@ const User = ({
   console.log(background.color);
 
   return (
-    <>
-      <div className="user-card" key={id}>
-        <div
-          className="user-card-img-name-section"
-          style={{ background: `${background.color}` }}
-        >
-          <img src={picture} />
-          <h1>
-            {firstName} {lastName}
-          </h1>
-        </div>
+    <div className="user-card" key={id}>
+      <div
+        className="user-card-img-name-section"
+        style={{ background: `${background.color}` }}
+      >
+        <img src={picture} />
+        <h1>
+          {firstName} {lastName}
+        </h1>
+      </div>
 
+      <div className="user-card-info">
         <div className="user-card-info-item">
           <i>
             <FiMail />
@@ -76,7 +76,7 @@ const User = ({
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

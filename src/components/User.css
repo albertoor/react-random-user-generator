@@ -1,26 +1,28 @@
 .user-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   width: 500px;
   background-color: #ffff;
   border-radius: 5px;
   margin: 2em 2em;
 }
 
-.user-card > img {
-  width: 150px;
-  border-radius: 50%;
-}
-
 .user-card > h2 > i {
   align-self: center;
+}
+
+.user-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user-card-info-item {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: auto;
 }
 
 .user-card-info-item > h2 {
@@ -30,5 +32,12 @@
 .user-card-img-name-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.user-card-img-name-section > img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 1em;
 }
