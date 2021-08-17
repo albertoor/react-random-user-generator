@@ -4,7 +4,7 @@ const formatData = apiResponse => {
 };
 
 const getUsers = () => {
-  return fetch('https://randomuser.me/api/?results=10')
+  return fetch('https://randomuser.me/api/?results=27')
     .then(res => res.json())
     .then(formatData);
 };

@@ -5,3 +5,9 @@
 body {
   background-color: #5f5f6e;
 }
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #eee;
+}
