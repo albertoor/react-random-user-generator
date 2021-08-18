@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
-import UsersList from './components/UsersList';
+import Loader from './components/Loader';
+
+const UsersList = React.lazy(() => import('./components/UsersList'));
 
 const App = () => {
   return (
@@ -8,7 +10,11 @@ const App = () => {
       <div className="title">
         <h1>Random User Generator</h1>
       </div>
-      <UsersList />
+      <div>
+        <Suspense fallback={<Loader />}>
+          <UsersList />
+        </Suspense>
+      </div>
     </body>
   );
 };
