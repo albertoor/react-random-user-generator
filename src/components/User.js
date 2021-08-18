@@ -21,8 +21,6 @@ const User = ({
 
   const background = useBackground();
 
-  console.log(background.color);
-
   return (
     <div className="user-card" key={id}>
       <div

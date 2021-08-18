@@ -1,8 +1,12 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import Loader from './components/Loader';
+import LoaderSpinner from './components/LoaderSpinner';
 
-const UsersList = React.lazy(() => import('./components/UsersList'));
+const UsersList = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/UsersList')), 2000);
+  });
+});
 
 const App = () => {
   return (
@@ -10,11 +14,9 @@ const App = () => {
       <div className="title">
         <h1>Random User Generator</h1>
       </div>
-      <div>
-        <Suspense fallback={<Loader />}>
-          <UsersList />
-        </Suspense>
-      </div>
+      <Suspense fallback={<LoaderSpinner />}>
+        <UsersList />
+      </Suspense>
     </body>
   );
 };
